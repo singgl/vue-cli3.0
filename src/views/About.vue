@@ -1,5 +1,20 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <Sider/>
   </div>
 </template>
+
+<script>
+import Sider from '@/components/Sider.vue'
+export default {
+  components: {
+    Sider
+  }
+}
+</script>
+
+<style lang="less" scoped>
+  .about{
+    display: flex;
+  }
+</style>
