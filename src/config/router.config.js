@@ -1,10 +1,11 @@
-import Home from '@/views/Home.vue'
+// import Home from '@/views/Home.vue'
+import Index from '@/layout/BaseLayout.vue'
 
 const RouterMap = [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    name: 'Index',
+    component: Index
   },
   {
     path: '/about',

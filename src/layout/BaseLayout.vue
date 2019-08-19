@@ -1,48 +1,34 @@
 <template>
     <a-layout id="components-layout-demo-responsive">
         <a-layout-sider
-            breakpoint="lg"
-            collapsedWidth="0"
-            @collapse="onCollapse"
-            @breakpoint="onBreakpoint"
+            width='100'
         >
-            <div class="logo" />
-            <sidermenu/>
+            <!-- <div class="logo" /> -->
+            <AsiderMenu/>
         </a-layout-sider>
         <a-layout>
             <a-layout-header :style="{ background: '#fff', padding: 0 }" >
-                <sidermenu/>
+                <AsiderHeader/>
             </a-layout-header>
-            <a-layout-content :style="{ margin: '24px 16px 0' }">
-                <!-- <div :style="{ padding: '24px', background: '#fff', minHeight: '360px' }">
-                    content
-                </div> -->
-                <conten/>
+            <a-layout-content :style="{ margin: '24px 16px 0',background: '#fff' }">
+                <AsiderConten/>
             </a-layout-content>
-            <!-- <a-layout-footer style="textAlign: center">
-                Ant Design ©2018 Created by Ant UED
-            </a-layout-footer> -->
         </a-layout>
     </a-layout>
 </template>
 
 <script>
-import sidermenu from '@/components/Sider.vue'
-import header from '@/components/Header.vue'
-import conten from '@/components/Conten.vue'
+import AsiderMenu from '@/components/AsiderMenu.vue'
+import AsiderHeader from '@/components/AsiderHeader.vue'
+import AsiderConten from '@/components/AsiderConten.vue'
 export default {
     components:{
-        sidermenu,
-        header,
-        conten
+        AsiderMenu,
+        AsiderHeader,
+        AsiderConten
     },
     methods: {
-        onCollapse(collapsed, type) {
-            console.log(collapsed, type);
-        },
-        onBreakpoint(broken) {
-            console.log(broken);
-        }
+       
     }
 }
 </script>

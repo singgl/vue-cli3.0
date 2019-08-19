@@ -1,27 +1,29 @@
 <style lang="less" scoped>
     #Menu{
-        min-width: 200px;;
+        min-width: 100px;
+        text-align:center;
+        height:100vh;
+        background: #0181c8;
+        .ant-menu-dark{
+            background: #0181c8;
+            .ant-menu-item{
+                padding: 0 16px !important;
+                text-align: center;
+            }
+            .ant-menu-item-selected{
+                background: #0070b1;
+            }
+        }
     }
+
 </style>
 
 <template>
     <div id="Menu">
-        <a-menu theme="dark" mode="inline" :defaultSelectedKeys="['1']" style="width:200px; text-align:left; height:100vh;">
-            <a-menu-item key="1">
-                <a-icon type="user" />
-                <span class="nav-text">nav 1</span>
-            </a-menu-item>
-                <a-menu-item key="2">
-                <a-icon type="video-camera" />
-                <span class="nav-text">nav 2</span>
-            </a-menu-item>
-            <a-menu-item key="3">
-                <a-icon type="upload" />
-                <span class="nav-text">nav 3</span>
-            </a-menu-item>
-            <a-menu-item key="4">
-                <a-icon type="user" />
-                <span class="nav-text">nav 4</span>
+        <a-menu theme="dark" mode="inline" :defaultSelectedKeys="['0']">
+            <a-menu-item v-for="(item, index) in menuList" v-bind:key="index+''">
+                <!-- <a-icon v-bind:type="item.icon" /> -->
+                <span class="nav-text">{{item.name}}</span>
             </a-menu-item>
         </a-menu>
     </div>

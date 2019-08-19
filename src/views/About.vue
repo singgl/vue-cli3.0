@@ -1,14 +1,14 @@
 <template>
   <div class="about">
-    <Sider/>
+    <AsiderMenu/>
   </div>
 </template>
 
 <script>
-import Sider from '@/components/Sider.vue'
+import AsiderMenu from '@/components/AsiderMenu.vue'
 export default {
   components: {
-    Sider
+    AsiderMenu
   }
 }
 </script>
