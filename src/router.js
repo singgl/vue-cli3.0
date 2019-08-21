@@ -1,24 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import RouterMap from '@/config/router.config'
-import Home from '@/views/Home.vue'
 
 Vue.use(Router)
 
-export default new Router({
+// history --history路由
+
+const router = new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  // base: process.env.BASE_URL,
   routes: RouterMap
-  // routes: [
-  //   {
-  //     path: '/',
-  //     name: 'home',
-  //     component: Home
-  //   },
-  //   {
-  //     path: '/about',
-  //     name: 'about',
-  //     component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue')
-  //   }
-  // ]
 })
+
+export default router;
+

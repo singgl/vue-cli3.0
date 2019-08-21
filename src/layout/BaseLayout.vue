@@ -10,7 +10,12 @@
             <a-layout-header :style="{ background: '#fff', padding: 0 }" >
                 <AsiderHeader/>
             </a-layout-header>
-            <a-layout-content :style="{ margin: '24px 16px 0',background: '#fff' }">
+            <a-breadcrumb style="margin: 16px; text-align: left;">
+                <a-breadcrumb-item>Home</a-breadcrumb-item>
+                <a-breadcrumb-item>List</a-breadcrumb-item>
+                <a-breadcrumb-item>App</a-breadcrumb-item>
+            </a-breadcrumb>
+            <a-layout-content :style="{ margin: '0px 16px 0',background: '#fff' }">
                 <AsiderConten/>
             </a-layout-content>
         </a-layout>
@@ -33,10 +38,11 @@ export default {
 }
 </script>
 
-<style>
-#components-layout-demo-responsive .logo {
-    height: 32px;
-    background: rgba(255,255,255,.2);
-    margin: 16px;
-}
+<style lang="less" scoped>
+    .ant-layout{
+        height:100vh;
+        .ant-layout-sider{
+            background: #0181c8;
+        }
+    }
 </style>

@@ -1,6 +1,7 @@
 <style lang="less" scoped>
     #C_main{
         background: #fff;
+        height:100vh;
     }
 </style>
 
