@@ -7,6 +7,10 @@ import layout from '@/layout/BaseLayout.vue'
 
 const RouterMap = [
   {
+    path: '/login',
+    component: () => import('@/views/login.vue')
+  },
+  {
     path: '/',
     name: 'layout',
     component: layout,
@@ -15,7 +19,14 @@ const RouterMap = [
       {
         path: '/home',
         name:'home',
-        component: () => import('@/views/Home.vue')
+        component: () => import('@/views/Home.vue'),
+        children:[
+          {
+            path: '/index',
+            name:'index',
+            component: () => import('@/views/Index.vue'),
+          }
+        ]
       },
       {
         path: '/about',

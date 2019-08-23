@@ -1,7 +1,7 @@
 <template>
     <a-layout id="components-layout-demo-responsive">
         <a-layout-sider
-            width='100'
+            width='200'
         >
             <!-- <div class="logo" /> -->
             <AsiderMenu/>
@@ -23,9 +23,9 @@
 </template>
 
 <script>
-import AsiderMenu from '@/components/AsiderMenu.vue'
-import AsiderHeader from '@/components/AsiderHeader.vue'
-import AsiderConten from '@/components/AsiderConten.vue'
+import AsiderMenu from './components/AsiderMenu.vue'
+import AsiderHeader from './components/AsiderHeader.vue'
+import AsiderConten from './components/AsiderConten.vue'
 export default {
     components:{
         AsiderMenu,
