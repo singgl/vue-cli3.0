@@ -2,14 +2,19 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import { Layout, Button, Menu, Icon, Spin, Switch, Form, Breadcrumb} from 'ant-design-vue'
+import { Layout, Button, Menu, Icon, Spin, Switch, Form, Breadcrumb, Checkbox, Input} from 'ant-design-vue'
 
 Vue.component(Layout.name, Layout)
-Vue.component(Form.name, Form)
 Vue.component(Icon.name, Icon)
 Vue.component(Spin.name, Spin)
 Vue.component(Switch.name, Switch)
 Vue.component(Button.name, Button)
+Vue.component(Checkbox.name, Checkbox)
+Vue.component(Input.name, Input)
+Vue.component(Form.name, Form)
+const fItem = Form.Item
+Vue.component(fItem.name, fItem)
+
 Vue.component(Breadcrumb.name, Breadcrumb)
 const bItem = Breadcrumb.Item
 Vue.component(bItem.name, bItem)
@@ -32,12 +37,12 @@ Vue.component(Item.name, Item)
 Vue.config.productionTip = false
 
 // 全局导航守卫
-// router.beforeEach((to, from, next) => {
-//   console.log(to)
-//   console.log(from)
-//   console.log(next)
-//   next()
-// })
+router.beforeEach((to, from, next) => {
+  console.log(to)
+  console.log(from)
+  console.log(next)
+  next()
+})
 
 new Vue({
   router,

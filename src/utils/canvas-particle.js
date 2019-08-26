@@ -31,7 +31,7 @@ function canvasInit(canvasConfig, body){
 	
 	body.appendChild(canvasObj);
 
-	// canvas.element.style = "position: fixed; top: 0; left: 0; z-index: -1;";
+	canvas.element.style = "position: fixed; top: 0; left: 0; z-index: -1; background:#FFFAFA";
 	canvasSize(canvas.element);
 	window.onresize = function(){
 		canvasSize(canvas.element);
